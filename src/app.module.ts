@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-import { TypeOrmModule } from '@nestjs/typeorm'
+import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
@@ -16,8 +16,8 @@ import { AppService } from './app.service';
       password: process.env.DB_PASSWORD,
       synchronize: false,
       logging: false,
-      entities: [__dirname + '/**/*.entity{.js,.ts}']
-    })
+      entities: [__dirname + '/**/*.entity{.js,.ts}'],
+    }),
   ],
   controllers: [AppController],
   providers: [AppService],
