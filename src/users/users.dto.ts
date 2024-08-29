@@ -1,7 +1,5 @@
-import { read } from 'fs';
-
 export class UsersDto {
-  readonly id?: string;
+  readonly id?: number;
   readonly name: string;
   readonly email: string;
   readonly password: string;
