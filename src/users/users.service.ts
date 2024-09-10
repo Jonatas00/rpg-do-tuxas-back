@@ -19,15 +19,15 @@ export class UsersService {
     return users;
   }
 
-  async createUser(user: UserDomain): Promise<UserDomain> {
+ async createUser(user: UserDomain): Promise<UserDomain> {
+
     // Check if a user with the same email already exists
     const existingUser = await this.usersRepository.findOne({
       where: { email: user.email },
     });
-
     if (existingUser) {
       throw new HttpException('email already registered', 400);
-    }
+    }''
 
     const createdUser = await this.usersRepository.save(user);
     return createdUser;
